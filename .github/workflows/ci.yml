@@ -25,9 +25,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           # cache: "pip"
-      - run: pipx --version
+      - run: pipx --version  # 1.8.0
       - run: pipx run pycowsay "preinstalled pipx run pycowsay"
       - run: pip install pycowsay pipx 
       - run: pycowsay "pip installed pycowsay"
-      - run: python -m pipx --version
+      - run: python -m pipx --version  # 1.9.0 (upgraded)
       - run: python -m pipx run pycowsay "pythom -m pipx run pycowsay"
